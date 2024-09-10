@@ -1,57 +1,58 @@
-baseurl      = "https://kavinskyt.github.io/"
-title        = "My Portfolio"
+[module]
+  [module.hugoVersion]
+    extended = true
+    min = '0.90.0'
+
+baseurl = "https://kavinskyt.github.io/"
 languageCode = "en-us"
-theme        = "hello-friend-ng"
-paginate     = 10
+# Add it only if you keep the theme in the `themes` directory.
+# Remove it if you use the theme as a remote Hugo Module.
+theme = "terminal"
+paginate = 5
 
 [params]
-  dateform        = "Jan 2, 2006"
-  dateformShort   = "Jan 2"
-  dateformNum     = "2006-01-02"
-  dateformNumTime = "2006-01-02 15:04"
 
-  # Subtitle for home
-  homeSubtitle = "A simple and beautiful blog"
+  # dir name of your main content (default is `content/posts`).
+  # the list of set content will show up on your index page (baseurl).
+  contentTypeName = "posts"
 
-  # Set disableReadOtherPosts to true in order to hide the links to other posts.
-  disableReadOtherPosts = false
+  # if you set this to 0, only submenu trigger will be visible
+  showMenuItems = 5
 
-  # Enable sharing buttons, if you like
-  enableSharingButtons = true
-  
-  # Show a global language switcher in the navigation bar
-  enableGlobalLanguageMenu = true
+  # show selector to switch language
+  showLanguageSelector = false
 
-  # Metadata mostly used in document's head
-  description = "My new homepage or blog"
-  keywords = "homepage, blog"
-  images = [""]
+  # set theme to full screen width
+  fullWidthTheme = false
 
-[taxonomies]
-    category = "blog"
-    tag      = "tags"
-    series   = "series"
+  # center theme with default width
+  centerTheme = true
 
 [languages]
   [languages.en]
-    title = "Hello Friend NG"
-    copyright = '<a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0</a>'
+    title = "My Portfolio"
 
-  [languages.en.params]
-    subtitle  = "A simple theme for Hugo"
-    readOtherPosts = "Read other posts"
-    keywords = ""
+    [languages.en.params]
+      subtitle = "A simple, retro theme for Hugo"
+      owner = ""
+      keywords = ""
+      copyright = ""
+      menuMore = "Show more"
+      readMore = "Read more"
+      readOtherPosts = "Read other posts"
+      newerPosts = "Newer posts"
+      olderPosts = "Older posts"
+      missingContentMessage = "Page not found..."
+      missingBackButtonLabel = "Back to home page"
+      minuteReadingTime = "min read"
+      words = "words"
 
-    [languages.en.params.logo]
-      logoText = "hello friend ng"
-      logoHomeLink = "/"
-    # or
-    #
-    # path = "/img/your-example-logo.svg"
-    # alt = "Your example logo alt text"
+      [languages.en.params.logo]
+        logoText = "Andrea Toaiari"
+        logoHomeLink = "/"
 
-  # And you can even create generic menu
-  [[menu.main]]
-    identifier = "blog"
-    name       = "Blog"
-    url        = "/posts"
+      [languages.en.menu]
+        [[languages.en.menu.main]]
+          identifier = "projects"
+          name = "Projects"
+          url = "/projects"
