@@ -30,10 +30,10 @@ paginate = 5
 
 [languages]
   [languages.en]
-    title = "My Portfolio"
+    title = "Andrea Toaiari"
 
     [languages.en.params]
-      subtitle = "A simple, retro theme for Hugo"
+      subtitle = "Welcome to my portfolio!"
       owner = ""
       keywords = ""
       copyright = ""
